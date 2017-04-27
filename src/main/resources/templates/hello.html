@@ -5,6 +5,16 @@
     <title>Hello World!</title>
 </head>
 <body>
-<h1>Hello world!</h1>
+<h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+<ul >
+    <li th:each="user:${users}">
+        <p th:text="${user.firstName}"></p>
+        <p th:text="${user.lastName}"></p>
+    </li>
+</ul>
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
 </body>
 </html>
