@@ -10,4 +10,6 @@ public class MaslovaSecurityApplication {
 		SpringApplication.run(MaslovaSecurityApplication.class, args);
 	}
 
+
+
 }
